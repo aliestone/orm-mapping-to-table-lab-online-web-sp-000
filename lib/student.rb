@@ -9,8 +9,6 @@ class Student
     @grade = grade
   end
 
-  def student.create_table
-
 
   def save
     sql = <<-SQL
