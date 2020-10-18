@@ -13,9 +13,7 @@ class Student
      student = Student.new(name,grade)
      student.save
      student
-   end
- end
-
+  end
 
   def self.create_table
     sql =  <<-SQL
@@ -37,7 +35,7 @@ class Student
     DB[:conn].execute(sql, self.name, self.grade)
     end
   end
-end
+
 
 
 
