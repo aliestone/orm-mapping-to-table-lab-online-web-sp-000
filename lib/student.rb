@@ -9,7 +9,7 @@ class Student
     @grade = grade
   end
 
-  def self.create(:name, :grade)
+  def self.create(name:, grade:)
     @name = name
     @grade = grade
     save
