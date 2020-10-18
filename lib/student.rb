@@ -9,11 +9,12 @@ class Student
     @grade = grade
   end
 
-  def self.create(name:, grade:)
-    @name = name
-    @grade = grade
-    save
-  end
+  def self.create(name, grade)
+     student = Student.new(name,grade)
+     student.save
+     student
+   end
+ end
 
 
   def self.create_table
@@ -27,7 +28,7 @@ class Student
     DB[:conn].execute(sql)
   end
 
-  def save (name, grade)
+  def save
     sql = <<-SQL
       INSERT INTO students (name, grade)
       VALUES (?, ?)
